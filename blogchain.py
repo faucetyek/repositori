@@ -14,6 +14,11 @@ opts = webdriver.ChromeOptions()
 opts.add_argument('--lang=en-US')
 opts.add_argument(
     f"--user-data-dir={cookie}")
+opts.add_argument("--no-sandbox")
+opts.add_argument("--disable-extensions")
+opts.add_argument('--headless')
+opts.add_argument('--disable-gpu')
+
 driver = webdriver.Chrome(service=Service(
     ChromeDriverManager().install()), options=opts)
 
